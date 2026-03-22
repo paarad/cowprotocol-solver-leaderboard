@@ -70,6 +70,17 @@ export default async function Home({
           period={period}
         />
       </main>
+      <footer className="border-t border-[#2e3148] mt-16 py-6 text-center text-sm text-gray-500">
+        Built by{" "}
+        <a
+          href="https://github.com/paarad"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[#6B8AFF] hover:underline"
+        >
+          @paarad
+        </a>
+      </footer>
     </div>
   );
 }

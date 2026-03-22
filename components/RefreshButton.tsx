@@ -29,7 +29,7 @@ export default function RefreshButton() {
       <button
         onClick={handleRefresh}
         disabled={isPending}
-        className="flex items-center gap-2 rounded-lg bg-[#161b22] border border-[#30363d] px-4 py-2 text-sm text-gray-300 hover:text-white hover:border-[#F2A71B] transition-colors disabled:opacity-50"
+        className="flex items-center gap-2 rounded-lg bg-[#242637] border border-[#2e3148] px-4 py-2 text-sm text-gray-300 hover:text-white hover:border-[#6B8AFF] transition-colors disabled:opacity-50"
       >
         <span className={isPending ? "animate-spin" : ""}>↻</span>
         Refresh

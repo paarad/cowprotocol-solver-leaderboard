@@ -83,10 +83,10 @@ export default function LeaderboardTable({
   };
 
   return (
-    <div className="rounded-lg border border-[#30363d] bg-[#161b22] overflow-x-auto">
+    <div className="rounded-lg border border-[#2e3148] bg-[#242637] overflow-x-auto">
       <Table>
         <TableHeader>
-          <TableRow className="border-[#30363d] hover:bg-transparent">
+          <TableRow className="border-[#2e3148] hover:bg-transparent">
             <TableHead className="text-gray-400 w-16">Rank</TableHead>
             <TableHead
               className="text-gray-400 cursor-pointer hover:text-white"
@@ -139,8 +139,8 @@ export default function LeaderboardTable({
             return (
               <TableRow
                 key={solver.address}
-                className={`border-[#30363d] cursor-pointer hover:bg-[#1c2128] ${borderColor(rank)} ${
-                  rank % 2 === 0 ? "bg-[#0d1117]" : ""
+                className={`border-[#2e3148] cursor-pointer hover:bg-[#2a2d3e] ${borderColor(rank)} ${
+                  rank % 2 === 0 ? "bg-[#1b1e2e]" : ""
                 }`}
                 onClick={() => onSolverClick(solver)}
               >
@@ -157,7 +157,7 @@ export default function LeaderboardTable({
                       href={`https://explorer.cow.fi/address/${solver.address}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-xs font-mono text-gray-500 hover:text-[#F2A71B]"
+                      className="text-xs font-mono text-gray-500 hover:text-[#6B8AFF]"
                       onClick={(e) => e.stopPropagation()}
                     >
                       {solver.shortAddress}

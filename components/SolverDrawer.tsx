@@ -81,17 +81,17 @@ export default function SolverDrawer({
   }
 
   const tooltipStyle = {
-    backgroundColor: "#0d1117",
-    border: "1px solid #30363d",
+    backgroundColor: "#1b1e2e",
+    border: "1px solid #2e3148",
     borderRadius: "8px",
     color: "#fff",
   };
 
   return (
     <Sheet open={!!solver} onOpenChange={(open) => !open && onClose()}>
-      <SheetContent className="bg-[#161b22] border-[#30363d] text-white overflow-y-auto w-full sm:max-w-lg">
+      <SheetContent className="bg-[#242637] border-[#2e3148] text-white overflow-y-auto w-full sm:max-w-lg">
         <SheetHeader>
-          <SheetTitle className="text-[#F2A71B] text-xl">
+          <SheetTitle className="text-[#6B8AFF] text-xl">
             {solver.name}
           </SheetTitle>
         </SheetHeader>
@@ -106,7 +106,7 @@ export default function SolverDrawer({
               </code>
               <button
                 onClick={copyAddress}
-                className="shrink-0 text-xs px-2 py-1 rounded bg-[#30363d] hover:bg-[#3d444d] text-gray-300"
+                className="shrink-0 text-xs px-2 py-1 rounded bg-[#2e3148] hover:bg-[#363a50] text-gray-300"
               >
                 {copied ? "Copied!" : "Copy"}
               </button>
@@ -115,20 +115,20 @@ export default function SolverDrawer({
 
           {/* Stats grid */}
           <div className="grid grid-cols-3 gap-4">
-            <div className="rounded-lg bg-[#0d1117] p-3 text-center">
+            <div className="rounded-lg bg-[#1b1e2e] p-3 text-center">
               <p className="text-2xl font-bold text-white">
                 {solver.totalParticipations}
               </p>
               <p className="text-xs text-gray-400">Participations</p>
             </div>
-            <div className="rounded-lg bg-[#0d1117] p-3 text-center">
+            <div className="rounded-lg bg-[#1b1e2e] p-3 text-center">
               <p className="text-2xl font-bold text-[#3fb950]">
                 {solver.totalWins}
               </p>
               <p className="text-xs text-gray-400">Wins</p>
             </div>
-            <div className="rounded-lg bg-[#0d1117] p-3 text-center">
-              <p className="text-2xl font-bold text-[#F2A71B]">
+            <div className="rounded-lg bg-[#1b1e2e] p-3 text-center">
+              <p className="text-2xl font-bold text-[#6B8AFF]">
                 {solver.winRate}%
               </p>
               <p className="text-xs text-gray-400">Win Rate</p>
@@ -158,7 +158,7 @@ export default function SolverDrawer({
             href={`https://explorer.cow.fi/address/${solver.address}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block text-sm text-[#F2A71B] hover:underline"
+            className="inline-block text-sm text-[#6B8AFF] hover:underline"
           >
             View on CoW Explorer →
           </a>
@@ -174,13 +174,13 @@ export default function SolverDrawer({
                   <BarChart data={solverAuctions}>
                     <XAxis
                       dataKey="shortId"
-                      tick={{ fill: "#8b949e", fontSize: 10 }}
-                      axisLine={{ stroke: "#30363d" }}
+                      tick={{ fill: "#8b8fa3", fontSize: 10 }}
+                      axisLine={{ stroke: "#2e3148" }}
                       tickLine={false}
                     />
                     <YAxis
-                      tick={{ fill: "#8b949e", fontSize: 10 }}
-                      axisLine={{ stroke: "#30363d" }}
+                      tick={{ fill: "#8b8fa3", fontSize: 10 }}
+                      axisLine={{ stroke: "#2e3148" }}
                       tickLine={false}
                       tickFormatter={(v) => formatScore(v)}
                     />
@@ -196,7 +196,7 @@ export default function SolverDrawer({
                       {solverAuctions.map((entry, index) => (
                         <Cell
                           key={index}
-                          fill={entry.won ? "#3fb950" : "#484f58"}
+                          fill={entry.won ? "#3fb950" : "#3d4055"}
                         />
                       ))}
                     </Bar>
@@ -222,17 +222,17 @@ export default function SolverDrawer({
                   <LineChart data={weeklyData}>
                     <CartesianGrid
                       strokeDasharray="3 3"
-                      stroke="#30363d"
+                      stroke="#2e3148"
                     />
                     <XAxis
                       dataKey="shortWeek"
-                      tick={{ fill: "#8b949e", fontSize: 10 }}
-                      axisLine={{ stroke: "#30363d" }}
+                      tick={{ fill: "#8b8fa3", fontSize: 10 }}
+                      axisLine={{ stroke: "#2e3148" }}
                       tickLine={false}
                     />
                     <YAxis
-                      tick={{ fill: "#8b949e", fontSize: 10 }}
-                      axisLine={{ stroke: "#30363d" }}
+                      tick={{ fill: "#8b8fa3", fontSize: 10 }}
+                      axisLine={{ stroke: "#2e3148" }}
                       tickLine={false}
                       tickFormatter={(v) => `${v}%`}
                     />
@@ -243,9 +243,9 @@ export default function SolverDrawer({
                     <Line
                       type="monotone"
                       dataKey="winRate"
-                      stroke="#F2A71B"
+                      stroke="#6B8AFF"
                       strokeWidth={2}
-                      dot={{ fill: "#F2A71B", r: 4 }}
+                      dot={{ fill: "#6B8AFF", r: 4 }}
                       activeDot={{ r: 6 }}
                     />
                   </LineChart>

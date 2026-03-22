@@ -18,7 +18,7 @@ export default function StatsCards({
 }: StatsCardsProps) {
   return (
     <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
-      <Card className="border-[#30363d] bg-[#161b22]">
+      <Card className="border-[#2e3148] bg-[#242637]">
         <CardHeader className="pb-2">
           <CardTitle className="text-sm font-medium text-gray-400">
             {periodLabel ?? "Auctions Analyzed"}
@@ -31,14 +31,14 @@ export default function StatsCards({
         </CardContent>
       </Card>
 
-      <Card className="border-[#30363d] bg-[#161b22]">
+      <Card className="border-[#2e3148] bg-[#242637]">
         <CardHeader className="pb-2">
           <CardTitle className="text-sm font-medium text-gray-400">
             Top Solver
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <p className="text-lg font-bold text-[#F2A71B]">{topSolver.name}</p>
+          <p className="text-lg font-bold text-[#6B8AFF]">{topSolver.name}</p>
           <p className="text-xs text-gray-500 font-mono">
             {topSolver.shortAddress}
           </p>
@@ -46,7 +46,7 @@ export default function StatsCards({
         </CardContent>
       </Card>
 
-      <Card className="border-[#30363d] bg-[#161b22]">
+      <Card className="border-[#2e3148] bg-[#242637]">
         <CardHeader className="pb-2">
           <CardTitle className="text-sm font-medium text-gray-400">
             Most Active
@@ -63,7 +63,7 @@ export default function StatsCards({
         </CardContent>
       </Card>
 
-      <Card className="border-[#30363d] bg-[#161b22]">
+      <Card className="border-[#2e3148] bg-[#242637]">
         <CardHeader className="pb-2">
           <CardTitle className="text-sm font-medium text-gray-400">
             Total Surplus
